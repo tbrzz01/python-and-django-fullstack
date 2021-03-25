@@ -68,7 +68,9 @@ print(stringBits('Heeololeo'))
 def end_other(a, b):
     lower_a = a.lower()
     lower_b = b.lower()
+    # without using endswith
     e = lambda la,lb: la[len(la)-len(lb):len(la)] == lb
+    e2 = lambda la,lb: la[-(len(lb):] == lb
     return e(lower_a, lower_b) or e(lower_b, lower_a)
 
 print(end_other('Hiabc', 'abc'))
